@@ -8,6 +8,10 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply font-sans antialiased text-slate-100;
   background: #0a0716;
@@ -26,12 +30,27 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.35), transparent),
-    radial-gradient(1px 1px at 40% 80%, rgba(255, 255, 255, 0.22), transparent),
-    repeating-linear-gradient(135deg, rgba(255, 62, 181, 0.02) 0, rgba(255, 62, 181, 0.02) 2px, transparent 2px, transparent 10px);
-  opacity: 0.35;
+  background-image: radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(2px 2px at 40% 80%, rgba(255, 255, 255, 0.25), transparent),
+    radial-gradient(1px 1px at 70% 60%, rgba(255, 62, 181, 0.35), transparent),
+    radial-gradient(1px 1px at 10% 70%, rgba(136, 129, 255, 0.35), transparent),
+    repeating-linear-gradient(135deg, rgba(255, 62, 181, 0.02) 0, rgba(255, 62, 181, 0.02) 2px, transparent 2px, transparent 12px);
+  background-size: 160px 160px, 200px 200px, 260px 260px, 220px 220px, 180px 180px, auto;
+  opacity: 0.45;
   mix-blend-mode: screen;
+  animation: twinkle 9s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
+  }
+  100% {
+    opacity: 0.55;
+    filter: drop-shadow(0 0 14px rgba(255, 62, 181, 0.25));
+  }
 }
 
 .section-shell {

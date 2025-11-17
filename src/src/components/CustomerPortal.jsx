@@ -1,6 +1,6 @@
 const CustomerPortal = () => {
   return (
-    <section id="portal" className="section-shell space-y-4">
+    <section id="portal" className="section-shell space-y-4 scroll-mt-28">
       <div className="flex flex-col gap-2">
         <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">Customer Portal</p>
         <h2 className="text-3xl font-bold text-white md:text-4xl">Sign-in placeholder</h2>

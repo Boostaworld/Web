@@ -1,15 +1,26 @@
+import { useMemo, useState } from 'react';
 import { feedbackEntries } from '../data/content';
 
 const Feedback = () => {
+  const [page, setPage] = useState(1);
+  const pageSize = 6;
+
+  const totalPages = useMemo(() => Math.ceil(feedbackEntries.length / pageSize), []);
+
+  const visibleEntries = useMemo(() => {
+    const start = (page - 1) * pageSize;
+    return feedbackEntries.slice(start, start + pageSize);
+  }, [page]);
+
   return (
-    <section id="feedback" className="section-shell space-y-4">
+    <section id="feedback" className="section-shell space-y-4 scroll-mt-28">
       <div className="flex flex-col gap-2">
         <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">Feedback</p>
         <h2 className="text-3xl font-bold text-white md:text-4xl">Player-loved reviews</h2>
         <p className="max-w-2xl text-slate-300">Real comments captured in neon frames with star rows and verified purchase labels.</p>
       </div>
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {feedbackEntries.map((entry) => (
+        {visibleEntries.map((entry) => (
           <article
             key={`${entry.date}-${entry.text}`}
             className="relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-[#181030]/80 via-[#110b21]/85 to-[#0b0916]/90 p-5 shadow-lg shadow-fuchsia-500/15"
@@ -30,14 +41,18 @@ const Feedback = () => {
         ))}
       </div>
       <div className="flex flex-wrap gap-2">
-        {[...Array(10)].map((_, index) => (
+        {Array.from({ length: totalPages }, (_, index) => index + 1).map((pageNumber) => (
           <button
-            key={index}
+            key={pageNumber}
+            type="button"
+            onClick={() => setPage(pageNumber)}
             className={`h-9 w-9 rounded-full border border-white/10 text-sm font-semibold transition hover:border-fuchsia-400 hover:text-fuchsia-200 ${
-              index === 0 ? 'bg-fuchsia-600 text-white shadow-[0_10px_30px_rgba(255,62,181,0.35)]' : 'bg-black/30 text-slate-200'
+              pageNumber === page
+                ? 'bg-fuchsia-600 text-white shadow-[0_10px_30px_rgba(255,62,181,0.35)]'
+                : 'bg-black/30 text-slate-200'
             }`}
           >
-            {index + 1}
+            {pageNumber}
           </button>
         ))}
       </div>

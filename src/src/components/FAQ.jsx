@@ -5,7 +5,7 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="section-shell space-y-4">
+    <section id="faq" className="section-shell space-y-4 scroll-mt-28">
       <div className="flex flex-col gap-2">
         <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">F.A.Q</p>
         <h2 className="text-3xl font-bold text-white md:text-4xl">Frequently Asked Questions</h2>
@@ -27,13 +27,17 @@ const FAQ = () => {
                 </div>
                 <span className="text-fuchsia-300">{isOpen ? '−' : '+'}</span>
               </button>
-              {isOpen && (
+              <div
+                className={`grid overflow-hidden transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                  isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-70'
+                }`}
+              >
                 <div className="space-y-2 px-6 pb-6 text-slate-300">
                   {item.answer.map((line) => (
                     <p key={line}>{line}</p>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
           );
         })}

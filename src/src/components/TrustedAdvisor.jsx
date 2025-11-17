@@ -2,7 +2,7 @@ import { trustedMetrics } from '../data/content';
 
 const TrustedAdvisor = () => {
   return (
-    <section id="trusted" className="section-shell space-y-4">
+    <section id="trusted" className="section-shell space-y-4 scroll-mt-28">
       <div className="flex flex-col gap-2">
         <p className="text-sm uppercase tracking-[0.25em] text-fuchsia-300">Trusted Advisor</p>
         <h2 className="text-3xl font-bold text-white md:text-4xl">Proof you can rely on</h2>

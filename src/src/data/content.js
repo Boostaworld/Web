@@ -9,16 +9,19 @@ export const navLinks = [
 ];
 
 export const products = [
-  { name: 'Discord Server Boosts', price: '$10.99+', group: 'Group' },
-  { name: 'Nitro Tokens (UHQ)', price: '$2.50+', group: 'Group' },
-  { name: 'Discord Nitro', price: '$5.99+', group: 'Group' },
-  { name: 'Spotify Upgrade', price: '$6.99+', group: 'Group' },
-  { name: 'Discord Aged Accounts', price: '$3.50+', group: 'Group' },
-  { name: 'Nitro Accounts', price: '$4.75+', group: 'Group' },
-  { name: 'Discord Members', price: '$7.25+', group: 'Group' },
-  { name: 'Boost Tool V4 [Fastest]', price: '$12.00+', group: 'Group' },
-  { name: 'BoostBot V5 [Latest]', price: '$14.50+', group: 'Group' },
-  { name: 'Netflix Upgrade', price: '$8.99+', group: 'Group' },
+  { name: 'Discord Server Boosts', price: '$10.99+', priceValue: 10.99, group: 'Group', category: 'Boosts' },
+  { name: 'Nitro Tokens (UHQ)', price: '$2.50+', priceValue: 2.5, group: 'Group', category: 'Nitro' },
+  { name: 'Discord Nitro', price: '$5.99+', priceValue: 5.99, group: 'Group', category: 'Nitro' },
+  { name: 'Spotify Upgrade', price: '$6.99+', priceValue: 6.99, group: 'Group', category: 'Entertainment' },
+  { name: 'Discord Aged Accounts', price: '$3.50+', priceValue: 3.5, group: 'Group', category: 'Accounts' },
+  { name: 'Nitro Accounts', price: '$4.75+', priceValue: 4.75, group: 'Group', category: 'Accounts' },
+  { name: 'Discord Members', price: '$7.25+', priceValue: 7.25, group: 'Group', category: 'Boosts' },
+  { name: 'Boost Tool V4 [Fastest]', price: '$12.00+', priceValue: 12.0, group: 'Group', category: 'Tools' },
+  { name: 'BoostBot V5 [Latest]', price: '$14.50+', priceValue: 14.5, group: 'Group', category: 'Tools' },
+  { name: 'Netflix Upgrade', price: '$8.99+', priceValue: 8.99, group: 'Group', category: 'Entertainment' },
+  { name: 'Telegram Members Surge', price: '$4.40+', priceValue: 4.4, group: 'Group', category: 'Boosts' },
+  { name: 'YouTube Watchtime Pack', price: '$9.25+', priceValue: 9.25, group: 'Group', category: 'Boosts' },
+  { name: 'Twitch Followers Bundle', price: '$7.75+', priceValue: 7.75, group: 'Group', category: 'Boosts' },
 ];
 
 export const faqItems = [
@@ -66,6 +69,12 @@ export const feedbackEntries = [
   { rating: 5, date: '03 Nov 2025', text: 'ultra reliable booster team', verified: true },
   { rating: 5, date: '28 Oct 2025', text: 'perfect for resellers', verified: true },
   { rating: 4, date: '22 Oct 2025', text: 'support replied quickly', verified: true },
+  { rating: 5, date: '15 Oct 2025', text: 'checkout was smooth', verified: true },
+  { rating: 5, date: '08 Oct 2025', text: 'tickets answered in minutes', verified: true },
+  { rating: 4, date: '01 Oct 2025', text: 'sort by options are handy', verified: true },
+  { rating: 5, date: '25 Sep 2025', text: 'cart works great now', verified: true },
+  { rating: 5, date: '17 Sep 2025', text: 'best boost quality', verified: true },
+  { rating: 4, date: '09 Sep 2025', text: 'ui feels smooth', verified: true },
 ];
 
 export const termsSections = [
