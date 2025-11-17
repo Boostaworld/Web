@@ -20,7 +20,7 @@ const FeatureRows = () => {
           <div
             key={feature.title}
             className={`gradient-card grid items-center gap-8 rounded-3xl p-8 shadow-glow md:grid-cols-2 ${
-              index % 2 === 1 ? 'md:flex-row-reverse md:[&>*:first-child]:md:order-2' : ''
+              index % 2 === 1 ? 'md:[&>*:first-child]:md:order-2' : ''
             }`}
           >
             <div className="space-y-4">
