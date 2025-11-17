@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-3 text-sm text-slate-100">
             {heroHighlights.map((item) => (
               <div key={item} className="flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 ring-1 ring-white/10">
-                <img src="/star.png" alt="star" className="h-4 w-4" />
+                <img src="/star.png" alt="" className="h-4 w-4" />
                 <span>{item}</span>
               </div>
             ))}
