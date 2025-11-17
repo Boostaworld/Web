@@ -1,29 +1,28 @@
-import Hero from './components/Hero';
-import FeatureRows from './components/FeatureRows';
-import CTASection from './components/CTASection';
+import ContactForm from './components/ContactForm';
+import CustomerPortal from './components/CustomerPortal';
+import FAQ from './components/FAQ';
+import Feedback from './components/Feedback';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Products from './components/Products';
+import Terms from './components/Terms';
+import TrustedAdvisor from './components/TrustedAdvisor';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-navy text-slate-50">
-      <Hero />
-      <FeatureRows />
-      <CTASection />
-      <footer className="section-shell border-t border-white/5 text-sm text-slate-400">
-        <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-          <span>Boostmania-inspired layout demo</span>
-          <div className="flex gap-3 text-slate-300">
-            <a href="#" className="hover:text-white">
-              Terms
-            </a>
-            <a href="#" className="hover:text-white">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white">
-              Support
-            </a>
-          </div>
-        </div>
-      </footer>
+    <div className="cosmic-bg min-h-screen text-slate-100">
+      <div className="cosmic-overlay" aria-hidden />
+      <Header />
+      <main className="space-y-12 md:space-y-16">
+        <Products />
+        <ContactForm />
+        <FAQ />
+        <Feedback />
+        <Terms />
+        <TrustedAdvisor />
+        <CustomerPortal />
+      </main>
+      <Footer />
     </div>
   );
 };
